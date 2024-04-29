@@ -1,0 +1,7 @@
+<h2> Physician Registration Page </h2>
+
+<%= form_with scope: :physician, url: physicians_path, local: true, data: { turbo: false } do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+<% end %>

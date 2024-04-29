@@ -1,0 +1,8 @@
+<h1> All Appointment List </h1>
+
+<%= @appointments.each do |appointment| %>
+    <p> <strong>ID</strong> is <%= appointment.id %>
+    <p> patient id is <%= appointment.patient_id %> </p>
+    <p> Physician id is <%= appointment.physician_id %> </p>
+
+<% end %>

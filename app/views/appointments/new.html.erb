@@ -1,0 +1,21 @@
+<h1> Book Your Appointment </h1>
+
+
+<%= form_with scope: :appointment, url: appointments_path, local: true, data: { turbo: false } do |f| %>
+    <p>
+     <%= f.label :appointment_date %>
+     <%= f.date_select :appointment_date %>
+    </p>
+
+    <p>
+     <%= f.label :physician_id %>
+     <%= f.select :physician_id, options_for_select(@physicians.map { |physician| [physician.name, physician.id]}) %>
+    </p>
+    <p>
+    <%= f.label :patient_id %>
+    <%= f.text_field :patient_id %>
+    </p>
+
+    <%= f.submit %>
+
+<% end %>
