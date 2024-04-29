@@ -1,5 +1,13 @@
 <h2> Physician Registration Page </h2>
 
+
+<% if @physician.errors.any? %>
+    <%= @physician.errors.full_messages.each do |msg| %>
+        <%= msg %>
+    <% end %>
+<% end %>
+
+
 <%= form_with scope: :physician, url: physicians_path, local: true, data: { turbo: false } do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>

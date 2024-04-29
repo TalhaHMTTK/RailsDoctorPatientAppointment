@@ -6,7 +6,7 @@ class PhysiciansController < ApplicationController
 
 
     def new 
-
+        @physician = Physician.new
     end
 
     def index
